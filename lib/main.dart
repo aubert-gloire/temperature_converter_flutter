@@ -11,8 +11,8 @@ class TempConverterApp extends StatelessWidget {
     return MaterialApp(
       title: 'Temperature Converter',
       theme: ThemeData(
-        primarySwatch: Colors.purple,
-        primaryColor: Colors.purple,
+        primarySwatch: Colors.blue,
+        primaryColor: Colors.blue,
       ),
       home: const TempConverterHome(),
     );
@@ -61,7 +61,7 @@ class _TempConverterHomeState extends State<TempConverterHome> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Temperature Converter'),
-        backgroundColor: Colors.purple,
+        backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
       ),
       body: SafeArea(
@@ -124,7 +124,7 @@ class _TempConverterHomeState extends State<TempConverterHome> {
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 18,
-            color: Colors.purple,
+            color: Colors.blue,
           ),
         ),
         Row(
@@ -132,7 +132,7 @@ class _TempConverterHomeState extends State<TempConverterHome> {
             Radio(
               value: 'F to C',
               groupValue: _conversionType,
-              activeColor: Colors.purple,
+              activeColor: Colors.blue,
               onChanged: (value) => setState(() => _conversionType = value!),
             ),
             const Text('Fahrenheit to Celsius'),
@@ -143,7 +143,7 @@ class _TempConverterHomeState extends State<TempConverterHome> {
             Radio(
               value: 'C to F',
               groupValue: _conversionType,
-              activeColor: Colors.purple,
+              activeColor: Colors.blue,
               onChanged: (value) => setState(() => _conversionType = value!),
             ),
             const Text('Celsius to Fahrenheit'),
@@ -164,7 +164,7 @@ class _TempConverterHomeState extends State<TempConverterHome> {
               hintText: 'Enter temperature',
               border: OutlineInputBorder(),
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.purple, width: 2),
+                borderSide: BorderSide(color: Colors.blue, width: 2),
               ),
             ),
           ),
@@ -176,7 +176,7 @@ class _TempConverterHomeState extends State<TempConverterHome> {
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
-              color: Colors.purple,
+              color: Colors.blue,
             ),
           ),
         ),
@@ -184,8 +184,8 @@ class _TempConverterHomeState extends State<TempConverterHome> {
           child: Container(
             padding: const EdgeInsets.all(16.0),
             decoration: BoxDecoration(
-              color: Colors.purple.shade50,
-              border: Border.all(color: Colors.purple.shade200),
+              color: Colors.blue.shade50,
+              border: Border.all(color: Colors.blue.shade200),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Text(
@@ -193,7 +193,7 @@ class _TempConverterHomeState extends State<TempConverterHome> {
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
-                color: Colors.purple,
+                color: Colors.blue,
               ),
               textAlign: TextAlign.center,
             ),
@@ -207,7 +207,7 @@ class _TempConverterHomeState extends State<TempConverterHome> {
     return ElevatedButton(
       onPressed: _convert,
       style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.purple,
+        backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
         padding: const EdgeInsets.symmetric(vertical: 16),
         textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
@@ -226,14 +226,14 @@ class _TempConverterHomeState extends State<TempConverterHome> {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 18,
-              color: Colors.purple,
+              color: Colors.blue,
             ),
           ),
           const SizedBox(height: 8),
           Expanded(
             child: Container(
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.purple.shade200),
+                border: Border.all(color: Colors.blue.shade200),
                 borderRadius: BorderRadius.circular(8),
               ),
               child: _history.isEmpty
@@ -252,7 +252,7 @@ class _TempConverterHomeState extends State<TempConverterHome> {
                         title: Text(_history[index]),
                         leading: const Icon(
                           Icons.thermostat,
-                          color: Colors.purple,
+                          color: Colors.blue,
                         ),
                       ),
                     ),
